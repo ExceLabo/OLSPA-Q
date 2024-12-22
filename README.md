@@ -1,5 +1,5 @@
 # 電子質問票システム OLSPA-Q
-## **O**ff**L**ine-compatible **S**ingle**P**age**A**pplication-**Q**uestionnair
+**O**ff**L**ine-compatible **S**ingle**P**age**A**pplication-**Q**uestionnair
 
 * Version : 1.0
 * LastUpdate : 2024/12/22
@@ -71,6 +71,7 @@ const form_option = {
 * saveformat : 出力の保存形式を設定します。現在以下をサポートしています。
    * txt : テキスト形式(.txt)
    * csv : CSVファイル(.csv)
+   * view : データは出力せず、ページ上に結果を出すことができます。
 * question : 質問項目を定義する場所です。質問の個数に応じて、内部の波括弧範囲({"id": ...}で定義される範囲)を複写して下さい。
    * id : 通し番号です。1、2、3、4…と順番に指定して下さい。0は使用できません。後述の保存形式に影響しますので、数字を飛ばして指定することはできません。
    * caption : 質問文を入力します。
@@ -91,16 +92,14 @@ const form_option = {
         * month : 年月入力
    * required : 入力必須とするかどうかの設定が可能です。「true(必須)」/「false(任意)」で指定して下さい。
    * detail : 追加の設定を指定します。「type」に応じて以下の書式で設定できます。不要であれば省略も可能です。
-     <dl>
-        <dt>一般</dt>
-        <dd>`"detail": {"minlength": 最小文字数, "maxlength": 最大文字数}`</dd>
-        <dt>数値系</dt>
-        <dd>`"detail": {"min": 最小値, "max": 最大値, "step": 変化単位(既定は1, 実数にしたい場合はany)}`</dd>
-        <dt>選択式</dt>
-        <dd>`"detail": ["選択肢1", "選択肢2", "選択肢3",...]`</dd>
-        <dt>時間系</dt>
-        <dd>`"detail": {"min": 最小値, "max": 最大値}`</dd>
-     </dl>
+      ##### 一般
+      * `"detail": {"minlength": 最小文字数, "maxlength": 最大文字数}`
+      ##### 数値系
+      * `"detail": {"min": 最小値, "max": 最大値, "step": 変化単位(既定は1, 実数にしたい場合はany)}`
+      ##### 選択式
+      * `"detail": ["選択肢1", "選択肢2", "選択肢3",...]`
+      ##### 時間系
+      * `"detail": {"min": 最小値, "max": 最大値}`
 
 
 ### 設定詳細 : 結果の保存書式設定
