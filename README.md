@@ -17,8 +17,8 @@ Webブラウザをもちいており、Operating Systemに依存せず使用す�
 
 ### 要件
 
-Operating System(OS) : 指定なし
-Webブラウザ : Chrome/Edge/Firefox/Internet Explorer/Safari/Opera/Stock browser on Android/Safari on iOS
+* Operating System(OS) : 指定なし
+* Webブラウザ : Chrome/Edge/Firefox/Internet Explorer/Safari/Opera/Stock browser on Android/Safari on iOS
    ※JavaScriptが動作する必要があります。
 
 
