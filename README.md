@@ -1,32 +1,32 @@
-==============================================
+# 電子質問票システム OLSPA-Q
+## *O*ff*L*ine-compatible *S*ingle*P*age*A*pplication-*Q*uestionnair
 
-  電子質問票システム OLSPA-Q
-  [O]ff[L]ine-operative [S]ingle[P]age[A]pplication-[Q]uestionnair
+* Version : 1.0
+* LastUpdate : 2024/12/22
+* Copyright : えくせらぼソフト 2024-
+* Depend-on : jQuery(v3.7.1, slim)
 
-  Version : 1.0
-  LastUpdate : 2024/12/20
-  Copyright : えくせらぼソフト 2024-
-  Depend-on : jQuery(v3.7.1, slim)
+---
 
-==============================================
-
-■はじめに
+### はじめに
 
 OLASPA-Q(以下本ソフト)はインターネット非接続下でも動作可能なアンケート集計ソフトです。
 Webブラウザをもちいており、Operating Systemに依存せず使用することが可能です。
 質問票の結果はシステムで設定されているダウンロードフォルダへ指定の様式で格納されます。
 
 
-■要件
+### 要件
 
 Operating System(OS) : 指定なし
 Webブラウザ : Chrome/Edge/Firefox/Internet Explorer/Safari/Opera/Stock browser on Android/Safari on iOS
    ※JavaScriptが動作する必要があります。
 
 
-■基本動作
+---
 
-これらファイルを任意のフォルダで展開して下さい。
+### 基本動作
+
+HTMLファイルとconfigフォルダが動作に必要です。これらファイルを任意のフォルダで展開して下さい。
 開始するには付属しているHTMLファイル(デフォルトはindex.html)を起動することで開始できます。
 
 事前設定として識別子(ID)を入力した状態で、回答者に端末を渡して下さい。
@@ -37,7 +37,7 @@ Webブラウザ : Chrome/Edge/Firefox/Internet Explorer/Safari/Opera/Stock brows
 なお、他のファイル名に変更するとシステムが読み取れませんので注意して下さい。
 
 
-■設定詳細 : フォーム設定
+### 設定詳細 : フォーム設定
 
 「settings_デモ.txt」を参考に適宜修正して下さい。
 詳細はJavaScriptの知識があると比較的安全に調整することが可能です。
@@ -45,7 +45,7 @@ Webブラウザ : Chrome/Edge/Firefox/Internet Explorer/Safari/Opera/Stock brows
 [！] 表記方法に留意して下さい。項目名や書式が正しくない場合、正常に動作しなくなります。
 
 
-□テンプレート(◇◇◇の部分は編集可)
+#### テンプレート(◇◇◇の部分は編集可)
 
 const form_option = {
   "title": "◇◇◇",
@@ -63,7 +63,7 @@ const form_option = {
 }
 
 
-□項目詳細
+#### 項目詳細
 
 ・ title : 質問フォームのタイトルを入力します。
 ・ savefilename : ファイルで保存する場合、そのファイル名を指定します。実際に保存されるファイル名は「(savefilenameの指定)_(質問票ID).(saveformatの指定)」となります。
@@ -100,7 +100,7 @@ const form_option = {
       - "detail": {"min": 最小値, "max": 最大値}
 
 
-■設定詳細 : 結果の保存書式設定
+### 設定詳細 : 結果の保存書式設定
 
 「settings_デモ.txt」を参考に適宜修正して下さい。
 詳細はJavaScriptの知識があると比較的安全に調整することが可能です。
@@ -108,12 +108,12 @@ const form_option = {
 [！] 表記方法に留意して下さい。項目名や書式が正しくない場合、正常に動作しなくなります。
 
 
-□テンプレート(◇◇◇の部分は編集可)
+#### テンプレート(◇◇◇の部分は編集可)
 
 const res_temp = function(s, d) {return `◇◇◇`}
 
 
-□項目詳細
+#### 項目詳細
 
 テンプレートを適宜編集して下さい。改行はそのまま保存されます。一部の特殊文字(「`」「{」「}」「$」)は使用を控えて下さい。
 テンプレートに以下の書式で記入することでアンケート結果を反映させることができます。
