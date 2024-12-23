@@ -3,11 +3,12 @@
   電子質問票システム OLSPA-Q
   [O]ff[L]ine-operative [S]ingle[P]age[A]pplication-[Q]uestionnair
 
-  Version : 1.0
-  LastUpdate : 2024/12/20
+----------------------------------------------
+  Version : 1.1
+  LastUpdate : 2024/12/23
   Copyright : えくせらぼソフト 2024-
   Depend-on : jQuery(v3.7.1, slim)
-
+----------------------------------------------
 ==============================================
 
 ■はじめに
@@ -50,7 +51,7 @@ Webブラウザ : Chrome/Edge/Firefox/Internet Explorer/Safari/Opera/Stock brows
 const form_option = {
   "title": "◇◇◇",
   "savefilename": "◇◇◇",
-  "saveforat": "◇◇◇",
+  "saveforat": ["◇◇◇"],
   "question": [
     {
       "id": ◇◇◇,
@@ -68,8 +69,10 @@ const form_option = {
 ・ title : 質問フォームのタイトルを入力します。
 ・ savefilename : ファイルで保存する場合、そのファイル名を指定します。実際に保存されるファイル名は「(savefilenameの指定)_(質問票ID).(saveformatの指定)」となります。
 ・ saveformat : 出力の保存形式を設定します。現在以下をサポートしています。
-   - txt : テキスト形式(.txt)
-   - csv : CSVファイル(.csv)
+・ saveformat : 出力の保存形式を設定します。現在以下をサポートしています。
+   ・ txt : テキスト形式(.txt)。"csv"を同時に指定することはできません。
+   ・ csv : CSVファイル(.csv)。"txt"を同時に指定することはできません。
+   ・ view : データは出力せず、ページ上に結果を出すことができます。
 ・ question : 質問項目を定義する場所です。質問の個数に応じて、内部の波括弧範囲({"id": ...}で定義される範囲)を複写して下さい。
    ・ id : 通し番号です。1、2、3、4…と順番に指定して下さい。0は使用できません。後述の保存形式に影響しますので、数字を飛ばして指定することはできません。
    ・ caption : 質問文を入力します。

@@ -5,7 +5,7 @@
 const form_option = {
   "title": "◇◇◇",
   "savefilename": "◇◇◇",
-  "saveformat": "◇◇◇",
+  "saveformat": ["◇◇◇"],
   "question": [
     {
       "id": ◇◇◇,

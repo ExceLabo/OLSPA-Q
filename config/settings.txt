@@ -6,7 +6,7 @@
 const form_option = {
   "title": "練習用の質問票",
   "savefilename": "Q-practice",
-  "saveformat": "view",
+  "saveformat": ["txt", "view"],
   "question": [
     {
       "id": 1,    // idは半角数字で1から順に指定して下さい、ズレると結果が正常に取得できなくなります。
