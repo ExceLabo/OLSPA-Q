@@ -1,8 +1,8 @@
 # 電子質問票システム OLSPA-Q
 **O**ff**L**ine-compatible **S**ingle**P**age**A**pplication-**Q**uestionnair
 
-* Version : 1.1
-* LastUpdate : 2024/12/23
+* Version : 1.2
+* LastUpdate : 2025/01/11
 * Copyright : えくせらぼソフト 2024-
 * Depend-on : jQuery(v3.7.1, slim)
 

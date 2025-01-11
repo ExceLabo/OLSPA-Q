@@ -31,7 +31,8 @@ const form_option = {
       "id": 4,
       "caption": "年齢を入力して下さい",
       "type": "number",
-      "required": true
+      "required": true,
+      "detail": {"max": 120}
     },
     {
       "id": 5,
