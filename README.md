@@ -1,8 +1,8 @@
 # 電子質問票システム OLSPA-Q
 **O**ff**L**ine-compatible **S**ingle**P**age**A**pplication-**Q**uestionnair
 
-* Version : 1.2
-* LastUpdate : 2025/01/11
+* Version : 1.3
+* LastUpdate : 2025/01/12
 * Copyright : えくせらぼソフト 2024-
 * Depend-on : jQuery(v3.7.1, slim)
 
@@ -92,7 +92,10 @@ const form_option = {
         * time : 時刻入力
         * date : 日付入力
         * month : 年月入力
-   * required : 入力必須とするかどうかの設定が可能です。「true(必須)」/「false(任意)」で指定して下さい。
+   * required : 入力必須とするかどうかの設定が可能です。
+	* true : 入力が必須の項目となります。questionのtypeがradioの場合、必ずいずれかの選択が必要です。checkboxの場合、列挙されたすべての項目を選択する必要があります。
+	* "atleast" : checkboxの場合のみ有効で、少なくとも1つの項目が選択されている必要があります。
+	* false : 入力しなくても回答を送信することができます。
    * detail : 追加の設定を指定します。「type」に応じて以下の書式で設定できます。不要であれば省略も可能です。
       ##### 一般
       * `"detail": {"minlength": 最小文字数, "maxlength": 最大文字数}`
@@ -128,7 +131,10 @@ const res_temp = function(s, d) {return `◇◇◇`}
 
 ---
 
+
 ## 更新履歴
+
 * 2024/12/22 Ver1.0
 * 2024/12/23 Ver1.1 : 複数の出力形式に対応
-* 2025/01/11 Ver1.2 : 入力内容検証を実装、CSSを微調整、BugFix
+* 2025/01/11 Ver1.2 : 入力内容検証を実装、CSSを微調整、バグ修正
+* 2025/01/12 Ver1.3 : 必須設定にatleast(checkboxで少なくとも1つの選択を必須)を導入

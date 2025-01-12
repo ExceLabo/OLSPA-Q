@@ -45,14 +45,14 @@ const form_option = {
       "id": 6,
       "caption": "この中で好きなものをすべて選んで下さい。",
       "type": "checkbox",
-      "required": false,
+      "required": "atleast",	// typeがcheckboxの場合のみに有効で、少なくとも1つを選択してほしい場合に設定できます。設定する際は「"」(ダブルクオーテーション)で囲んで下さい。
       "detail": ["りんご", "バナナ","みかん",  "いちご", "空気"]    // スペースやタブスペースはなくても多すぎても特に問題にはなりません。
     },
     {
       "id": 7,
       "caption": "回答の送信に同意しますか？",
       "type": "checkbox",
-      "required": true,
+      "required": true,		// typeがcheckboxの場合、requiredにtrueを指定する場合はすべての選択肢を選ぶことが必須となります。
       "detail": ["はい、同意します。"]    // 選択肢1つでも成立します
     },
     {
