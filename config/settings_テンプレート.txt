@@ -2,7 +2,7 @@
 // 設定の際にはまず仕様書を確認いただくようお願いします。
 
 // -------- ■フォーム設定■ --------
-const form_option = {
+const data = {
   "title": "◇◇◇",
   "savefilename": "◇◇◇",
   "saveformat": ["◇◇◇"],
