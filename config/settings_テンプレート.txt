@@ -2,7 +2,7 @@
 // 設定の際にはまず仕様書を確認いただくようお願いします。
 
 // -------- ■フォーム設定■ --------
-const data = {
+config["data"] = {
   "title": "◇◇◇",
   "savefilename": "◇◇◇",
   "saveformat": ["◇◇◇"],
@@ -14,8 +14,8 @@ const data = {
       "required": ◇◇◇,
       "detail": ◇◇◇
     },
-  ]
+  ],
+  template : function(s, d) {
+    return `◇◇◇`
+  }
 };
-
-// -------- ■出力時のテンプレート■ --------
-const res_temp = function(s, d) {return `◇◇◇`}
